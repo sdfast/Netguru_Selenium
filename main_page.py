@@ -1,15 +1,10 @@
+from base_page import BasePage
 from base_element import *
 from locators import *
 
 
-class MainPage:
-    def __init__(self, driver):
-        self.driver = driver
-        self.url = "https://www.netguru.co/"
-
-    def got_to_webpage(self):
-        self.driver.get(self.url)
-        print('== go to webpage ==')
+class MainPage(BasePage):
+    url = "https://www.netguru.co/"
 
     @property
     def close_agreement_message(self):

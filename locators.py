@@ -13,9 +13,11 @@ class MainPageLocators:
 
 class EstimatePageLocators:
     """Class containing locators from the career page: /estimate-project"""
-    EMAIL_INPUT_FIELD = (By.ID, 'email-36a16954-d5ff-4d10-94ce-e82e601422c2_6830')
-
-class CareerPageLocators:
-    """Class containing locators from the career page: /career"""
-
-    ELMO_BUTTON_2 = (By.CSS_SELECTOR, '#root > div > div._2ngXYtlcHXA-EjBwuz_RKI > button > i')
+    ESTIMATE_SUBMIT_BUTTON = (By.XPATH, '//*[@id="hsForm_36a16954-d5ff-4d10-94ce-e82e601422c2_1212"]/div[10]/div[2]/input')
+    DEVICE_DESKTOP_BUTTON = (By.XPATH, '/html/body/div[1]/section/div/div[1]/div[2]/div')
+    DEVICE_FRONTEND_BUTTON = (By.XPATH, '/html/body/div[1]/section/div/div[2]/div[2]/div')
+    EMAIL_INPUT_FIELD = (By.NAME, 'email')
+    FIRSTNAME_INPUT_FIELD = (By.NAME, 'firstname')
+    LASTNAME_INPUT_FIELD = (By.NAME, 'lastname')
+    PHONE_INPUT_FIELD = (By.NAME, 'phone')
+    DESCRIPTION_INPUT_FIELD = (By.NAME, 'short_description_of_idea')

@@ -1,6 +1,12 @@
 
 
 class BasePage(object):
+    url = None
+
     def __init__(self, driver):
+        print('== init - base page ==')
         self.driver = driver
-        self.url = "https://www.netguru.co/"
+
+    def got_to(self):
+        self.driver.get(self.url)
+        print('== go to webpage ==')
