@@ -4,11 +4,11 @@ from locators import *
 
 
 class MainPage(BasePage):
+    """Class with all elements located on the main page"""
     url = "https://www.netguru.co/"
 
     @property
     def close_agreement_message(self):
-        print('== accept agreement ==')
         return BaseElement(
             driver=self.driver,
             by=MainPageLocators.AGREEMENT_BUTTON[0],
@@ -17,7 +17,6 @@ class MainPage(BasePage):
 
     @property
     def close_cookies_message(self):
-        print('== accept agreement ==')
         return BaseElement(
             driver=self.driver,
             by=MainPageLocators.CLOSE_COOKIES_BUTTON[0],
@@ -26,7 +25,6 @@ class MainPage(BasePage):
 
     @property
     def right_slide_bar(self):
-        print('== right slide bar ==')
         return BaseElement(
             driver=self.driver,
             by=MainPageLocators.RIGHT_SLIDE_BAR_BUTTON[0],
@@ -34,7 +32,6 @@ class MainPage(BasePage):
         )
     @property
     def nav_bar_toggle(self):
-        print('== nav_bar_toggle ==')
         return BaseElement(
             driver=self.driver,
             by=MainPageLocators.NAV_BAR_TOGGLE_BUTTON[0],
@@ -42,17 +39,7 @@ class MainPage(BasePage):
         )
 
     @property
-    def go_to_careers(self):
-        print('== go_to_career ==')
-        return BaseElement(
-            driver=self.driver,
-            by=MainPageLocators.CAREERS_PAGE_NAV_BUTTON[0],
-            value=MainPageLocators.CAREERS_PAGE_NAV_BUTTON[1]
-        )
-
-    @property
     def go_to_estimate(self):
-        print('== go_to_estimate ==')
         return BaseElement(
             driver=self.driver,
             by=MainPageLocators.ESTIMATE_PROJECT_NAV_BUTTON[0],
